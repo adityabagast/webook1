@@ -22,18 +22,18 @@
 
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><?= $data['title'] ?></h3> <a href="<?= base_url; ?>/kategori/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Kategori</a>
+          <h3 class="card-title"><?= $data['title'] ?></h3> <a href="<?= base_url; ?>/Kategori/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Kategori</a>
         </div>
         <div class="card-body">
         
-      <form action="<?= base_url; ?>/kategori/cari" method="post">
+      <form action="<?= base_url; ?>/Kategori/cari" method="post">
  <div class="row mb-3">
     <div class="col-lg-6">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="" name="key" >
     <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="submit">Cari Data</button>
-          <a class="btn btn-outline-danger" href="<?= base_url; ?>/kategori" >Reset</a>
+          <a class="btn btn-outline-danger" href="<?= base_url; ?>/Kategori" >Reset</a>
     </div>
   </div>
 
@@ -55,7 +55,7 @@
                       <td><?= $no; ?></td>
                       <td><?= $row['nama_kategori'];?></td>
                       <td>
-                        <a href="<?= base_url; ?>/kategori/edit/<?= $row['id'] ?>" class="badge badge-info ">Edit</a> <a href="<?= base_url; ?>/kategori/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
+                        <a href="<?= base_url; ?>/Kategori/edit/<?= $row['id'] ?>" class="badge badge-info ">Edit</a> <a href="<?= base_url; ?>/Kategori/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
                       </td>
                     </tr>
                     <?php $no++; endforeach; ?>

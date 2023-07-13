@@ -1,6 +1,6 @@
 <?php
 
-define('base_url', 'http://localhost/webook1/public');
+define('base_url', 'http://localhost/webook/public');
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');

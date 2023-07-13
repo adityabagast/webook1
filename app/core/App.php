@@ -2,7 +2,7 @@
 
 class App{
 
-	protected $controller = 'Kategori';
+	protected $controller = 'Login';
 	protected $method = 'index';
 	protected $params = [];
 
@@ -13,9 +13,10 @@ class App{
 			$this->controller = $url[0] ;
 			unset($url[0]);
 		}
-
+		
 		require_once '../app/controllers/' . $this->controller . '.php';
 		$this->controller = new $this->controller;
+		
 
 		if(isset($url[1])){
 			if(method_exists($this->controller, $url[1])){
@@ -27,6 +28,10 @@ class App{
 		if(!empty($url)){
 			$this->params = array_values($url);
 		}
+
+		// var_dump($url, $this->controller, $this->method, $this->params);
+		// die;
+
 
 		call_user_func_array([$this->controller, $this->method], $this->params);
 	}
